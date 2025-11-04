@@ -11,6 +11,7 @@ void drawMoth1 (float side) {
   pushMatrix();
   translate(x, y);
   rotate(angle);
+  fill(random(255), random(255), random(255), random(255));
   drawTriangle(side);
   rotate(PI);
   translate(0, side * 0.9);
