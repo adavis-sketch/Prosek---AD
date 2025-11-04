@@ -5,6 +5,11 @@ void moth (float scale) {
     drawMoth2(scale);
     drawMoth3(scale);
   }    
+  for (int i = 0; i < 500; i++){
+    drawMoth2(scale);
+    drawMoth3(scale);
+  }
+}
 
 void drawMoth1 (float side) {
   float x = random(side, width - side);
