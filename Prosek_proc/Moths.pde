@@ -3,6 +3,7 @@ void moth (float scale) {
 
     drawMoth1(scale);
     drawMoth2(scale);
+    drawMoth3(scale);
   }    
 
 void drawMoth1 (float side) {
@@ -34,6 +35,25 @@ void drawMoth2 (float side){
   drawTriangle(side);
   popMatrix();
 }
+
+void drawMoth3 (float side){
+  float x = random(200, width - side);
+  float y = random(side, height - 100);
+  float angle = random(360);
+  pushMatrix();
+  translate(x, y);
+  rotate(angle);
+  fill(random(255), random(255), random(255), random(255));
+  drawTriangle(side);
+  rotate(120);
+  translate(0, side * 0.5);
+  drawTriangle(side);
+  rotate(120);
+  translate(0, side * 0.5);
+  drawTriangle(side);
+  popMatrix();
+}
+
 void drawTriangle(float side) {
   pushMatrix();
   beginShape();
