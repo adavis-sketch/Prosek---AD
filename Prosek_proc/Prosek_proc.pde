@@ -3,5 +3,5 @@ void setup() {
   background(200);
   noStroke();
   noLoop();
-  moth(15);
+  moth(10);
 }
