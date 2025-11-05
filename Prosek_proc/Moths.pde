@@ -1,20 +1,28 @@
 void moth (float scale) {
-  for (int i = 0; i < 500; i++) {
+  for (int i = 0; i < 200; i++) {
 
-   
-    drawMoth2(scale, true);
+    drawMoth1(scale, true);
+
     
   }
-  for (int i = 0; i < 300; i++) {
+  for (int i = 0; i < 250; i++) {
 
-    drawMoth2(scale, false);
+    drawMoth1(scale, false);
+
     
   }
 }
 
-void drawMoth1 (float side) {
-  float x = random(side, width - side);
-  float y = random(side, height - side);
+void drawMoth1 (float side, boolean yes) {
+  float x;
+  float y;
+  if (yes) {
+    x = random(side * 2, width - side * 2);
+    y = random(side * 2, height - side * 2);
+  } else {
+    x = random(200, width - 200);
+    y = random(100, height - 100);
+  }
   float angle = random(360);
   pushMatrix();
   translate(x, y);
@@ -50,9 +58,16 @@ void drawMoth2 (float side, boolean yes) {
   popMatrix();
 }
 
-void drawMoth3 (float side) {
-  float x = random(side * 2, width - side * 2);
-  float y = random(side * 2, height - side * 2);
+void drawMoth3 (float side, boolean yes) {
+  float x;
+  float y;
+  if (yes) {
+    x = random(side * 2, width - side * 2);
+    y = random(side * 2, height - side * 2);
+  } else {
+    x = random(side * 2, width - 200);
+    y = random(200, height - side * 2);
+  }
   float angle = random(360);
   pushMatrix();
   translate(x, y);
